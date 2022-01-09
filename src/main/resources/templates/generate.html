@@ -7,7 +7,7 @@
     <title>Number Generated</title>
 </head>
 <body>
-    <h1 th:text="|Your list of ${userInput} random numbers|">numberinput</h1>
+    <h1 th:text="${userInput gt 1}? |Your list of ${userInput} random numbers| : |Your list of ${userInput} random number|">numberinput</h1>
     <img th:each="pic:${pictures}" th:src="@{'image/'+${pic}}" alt="" width=200 height=200 />
 
 </body>
